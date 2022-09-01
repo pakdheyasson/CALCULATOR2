@@ -1,130 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
-    <title>KALKULATOR 2</title>
-    <style>
-        body{
-             width :100% ;
-             height:100vh;
-             background: rgb(13, 13, 14);
-             background-image: 
-                  url("/assetkalkulator/hpbeckground.png");
-             
-        }
-        .btn {
-            height: 65px;
-            font-size: 1.5em;
-        }
-    </style>
-</head>
-<div class="d-grid ">
-    
-    <div class="mx-auto my-auto w-100 bg-dark bg-opacity-25 rounded p-2 d-grid"     style="max-width:405px;">
-        <input type="text" name="" id="h" requaired disabled
-        placeholder="KALKULATOR 2" class="form-control form-control-lg fs-3 text-end bg-white border-0 rounded shadow-none" value="0">
-        <div class="row g-2 mt-1">
-            <div class="col">
-                <button class="btn w-100 bg-white" onclick="c('0')">C</button>
-            </div>
-            <div class="col-6">
-                <button class="btn w-100 bg-white" >Hapus</button>
-            </div>
-            <div class="col">
-                <button class="btn w-100 bg-white" onclick="h('/')">/</button>
-            </div>
-        <div class="row g-1 mt-1">
-            <div class="col-3">
-                <button class="btn w-100 bg-white" onclick="h('7')">7</button>
-            </div>
-            <div class="col-3">
-                <button class="btn w-100 bg-white" onclick="h('8')">8</button>
-            </div>
-            <div class="col-3">
-                <button class="btn w-100 bg-white" onclick="h('9')">9</button>
-            </div>
-            <div class="col-3">
-                <button class="btn w-100 bg-white" onclick="h('+')">+</button>
-            </div>
-        </div>
-        <div class="row g-1 mt-1">
-            <div class="col-3">
-                <button class="btn w-100 bg-white" onclick="h('4')">4</button>
-            </div>
-            <div class="col-3">
-                <button class="btn w-100 bg-white" onclick="h('5')">5</button>
-            </div>
-            <div class="col-3">
-                <button class="btn w-100 bg-white" onclick="h('6')">6</button>
-            </div>
-            <div class="col-3">
-                <button class="btn w-100 bg-white" onclick="h('-')">-</button>
-            </div>
-        </div>
-        <div class="row g-1 mt-1">
-            <div class="col-3">
-                <button class="btn w-100 bg-white" onclick="h('1')">1</button>
-            </div>
-            <div class="col-3">
-                <button class="btn w-100 bg-white" onclick="h('2')">2</button>
-            </div>
-            <div class="col-3">
-                <button class="btn w-100 bg-white" onclick="h('3')">3</button>
-            </div>
-            <div class="col-3">
-                <button class="btn w-100 bg-white" onclick="h('*')">X</button>
-            </div>
-        </div>
-        <div class="row g-1 mt-1">
-            <div class="col-3">
-                <button class="btn w-100 bg-white" onclick="h('.')">.</button>
-            </div>
-            <div class="col-3">
-                <button class="btn w-100 bg-white" onclick="h('0')">0</button>
-            </div>
-            <div class="col-6">
-                <button class="btn w-100 bg-white" onclick="h()">=</button>
-            </div>
-        </div>
-    </div>
-    <script>
-        var i=document.getElementById('h');
-        function l(y){
-            if(i.value=="0"){
-                i.value=y;
-            }else{
-                i.value+=y;
-            }
-        }
-        function c() {
-            i.value = "";
-            r();
-        }
-    
-        function hs() {
-            i.value=i.value.substr(0,i.value.lenght - 1);
-            r();
-        }
-        function h(angka) { 
-            console.log("angka yang diterima javascript" + angka)
-            console.log("angka yang ditampilkan" + i.value)
-            i.value = angka
-            // i.value += angka
-            // console.log(i.value)
-            // i.value = eval(i.value);
-        }
-        function r() {
-            if (i.value == "") {
-                i.value ="0";
-            }
-        }
-    </script>
+	<title>
+		
+	</title>
+	
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="styles.css">
 
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=Viga&display=swap" rel="stylesheet"> 
+
+	<!-- Script -->
+	<script src="script.js"></script>
+
+	<!-- Default switch -->
+
+</head>
+
+<body>
+	<div class="bg ">
+		
+		<div class="main">
+			<div class="container">
+				<table width="80" align="center" class="table">
+					<thead>
+					  <tr>
+						<th scope="col-2"></th>
+						<th scope="col"></th>
+						<th scope="col"></th>
+						<th scope="col"></th>
+					  </tr>
+					</thead>
+					<tbody>
+					  <tr>
+						<th scope="row"></th>
+						<td></td>
+						<td></td>
+						<td></td>
+					  </tr>
+					  <tr>
+						<th scope="row"></th>
+						<td><img src="/asset/kalkulatorjs.jpg"</td>
+						<td><label class="switch">
+							<input type="checkbox" checked>
+							<span class="slider round"></span>
+						  </label>
+						  <!--toggle end--></td>
+						<td></td>
+					  </tr>
+					  <tr>
+						<th scope="row"></th>
+						<td colspan="2">
+						</td>
+						<td></td>
+					  </tr>
+					</tbody>
+				  </table>
+				
+				<div class="row align-items-center">
+				  <div class="col">
+					
+				  </div>
+				  <div class="col -12">
+					<!--toggle start-->
+			
+				  </div>
+				  <div class="col">
+					
+				  </div>
+			  </div>
+				
+		  </div>
+			
+			<h7>Calculator</h7>
+		  <form name="form">
+				<input class="textarea" name="textarea">
+			</form>
+				<table>
+					<tr>
+						<td><input class="button" type="button" value="C" onclick="clean()"></td>
+						<td><input class="button" type="button" value="<" onclick="back()"></td>
+						<td><input class="button btn-green" type="button" value="/" onclick="insert(' / ')"></td>
+						<td><input class="button btn-green" type="button" value="x" onclick="insert(' * ')"></td>
+					</tr>
+					<tr>
+						<td><input class="button" type="button" value="7" onclick="insert(7)"></td>
+						<td><input class="button" type="button" value="8" onclick="insert(8)"></td>
+						<td><input class="button" type="button" value="9" onclick="insert(9)"></td>
+						<td><input class="button btn-green" type="button" value="-" onclick="insert(' - ')"></td>
+					</tr>
+					<tr>
+						<td><input class="button" type="button" value="4" onclick="insert(4)"></td>
+						<td><input class="button" type="button" value="5" onclick="insert(5)"></td>
+						<td><input class="button" type="button" value="6" onclick="insert(6)"></td>
+						<td><input class="button btn-green" type="button" value="+" onclick="insert(' + ')"></td>
+					</tr>
+					<tr>
+						<td><input class="button" type="button" value="1" onclick="insert(1)"></td>
+						<td><input class="button" type="button" value="2" onclick="insert(2)"></td>
+						<td><input class="button" type="button" value="3" onclick="insert(3)"></td>
+						<td rowspan=2><input style="height:106px;" class="button btn-green" type="button" value="=" onclick="equal()"></td>
+					</tr>
+					<tr>
+						<td><input class="button" type="button" value="0" onclick="insert(0)"></td>
+						<td><input class="button" type="button" value="00" onclick="insert('00')"></td>
+						<td><input class="button" type="button" value="." onclick="insert('.')"></td>
+					</tr>
+				</table>
+			
+		</div>
+	</div>
+	
 </body>
 </html>
-
